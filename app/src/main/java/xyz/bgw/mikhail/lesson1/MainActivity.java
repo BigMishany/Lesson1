@@ -13,11 +13,6 @@ public class MainActivity extends AppCompatActivity {
     Button button2 ;
     Button button3 ;
 
-    public static Intent createStartIntetn(Context context)
-    {
-        Intent intent = new Intent(context , Activity1.class);
-        return intent;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +24,16 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(Activity1.createStartIntetn(MainActivity.this));
+                startActivity(Activity1.createStartIntetn_1(MainActivity.this));
             }
         });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(Activity2.createStartIntetn_2(MainActivity.this));
+            }
+        });
+
 
 
     }

@@ -18,7 +18,8 @@ public class Activity1 extends AppCompatActivity {
     TextView List;
     ArrayList Data = new ArrayList();
     String Data_to_string;
-    public static Intent createStartIntetn(Context context) {
+
+    public static Intent createStartIntetn_1(Context context) {
         Intent intent = new Intent(context, Activity1.class);
         return intent;
     }
@@ -36,6 +37,7 @@ public class Activity1 extends AppCompatActivity {
             public void onClick(View v) {
                 Data.add(Text_user.getText().toString());
                 List.setText("Add information complete");
+                Text_user.setText("");
             }
         });
         buttonShow.setOnClickListener(new View.OnClickListener() {
