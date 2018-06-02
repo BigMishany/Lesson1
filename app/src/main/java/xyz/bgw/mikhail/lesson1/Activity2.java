@@ -51,7 +51,6 @@ public class Activity2 extends AppCompatActivity {
             public void onClick(View v) {
                 Data_to_string_2="";
                 List_2.setText(Data_2.toString());
-                //List_2.setText(Data_to_string_2);
             }
         });
 
