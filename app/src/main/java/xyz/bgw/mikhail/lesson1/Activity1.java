@@ -14,10 +14,10 @@ import java.util.ArrayList;
 public class Activity1 extends AppCompatActivity {
     Button buttonAdd;
     Button buttonShow;
-    EditText Text_user;
-    TextView List;
-    ArrayList Data = new ArrayList();
-    String Data_to_string;
+    EditText textUser;
+    TextView list;
+    ArrayList data = new ArrayList();
+    String dataToString;
 
     public static Intent createStartIntetn_1(Context context) {
         Intent intent = new Intent(context, Activity1.class);
@@ -30,25 +30,25 @@ public class Activity1 extends AppCompatActivity {
         setContentView(R.layout.activity_1);
         buttonAdd = findViewById(R.id.buttonAdd);
         buttonShow = findViewById(R.id.buttonShow);
-        Text_user = findViewById(R.id.editText);
-        List = findViewById(R.id.textView2);
+        textUser = findViewById(R.id.editText);
+        list = findViewById(R.id.textView2);
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Data.add(Text_user.getText().toString());
-                List.setText("Add information complete");
-                Text_user.setText("");
+                data.add(textUser.getText().toString());
+                list.setText("Add information complete");
+                textUser.setText("");
             }
         });
         buttonShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Data_to_string="";
-                for (int x = 0; x < Data.size(); x++)
+                dataToString ="";
+                for (int x = 0; x < data.size(); x++)
                 {
-                    Data_to_string = Data_to_string + " " + Data.get(x).toString();
+                    dataToString = dataToString + " " + data.get(x).toString();
                 }
-                List.setText(Data_to_string);
+                list.setText(dataToString);
             }
         });
 

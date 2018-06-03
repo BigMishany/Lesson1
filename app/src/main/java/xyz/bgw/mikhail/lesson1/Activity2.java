@@ -9,18 +9,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class Activity2 extends AppCompatActivity {
-    Button buttonAdd_2;
-    Button buttonShow_2;
-    EditText Text_user_2;
-    TextView List_2;
-    TreeSet Data_2 = new TreeSet<String>();
-    String Data_to_string_2;
+    Button buttonAdd2;
+    Button buttonShow2;
+    EditText textUser2;
+    TextView list2;
+    TreeSet data2 = new TreeSet<String>();
+    String dataToString2;
 
 
 
@@ -34,23 +31,23 @@ public class Activity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
-        buttonAdd_2 = findViewById(R.id.buttonAdd_2);
-        buttonShow_2 = findViewById(R.id.buttonShow_2);
-        Text_user_2 = findViewById(R.id.editText_2);
-        List_2 = findViewById(R.id.textView_2);
-        buttonAdd_2.setOnClickListener(new View.OnClickListener() {
+        buttonAdd2 = findViewById(R.id.buttonAdd_2);
+        buttonShow2 = findViewById(R.id.buttonShow_2);
+        textUser2 = findViewById(R.id.editText_2);
+        list2 = findViewById(R.id.textView_2);
+        buttonAdd2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Data_2.add(Text_user_2.getText().toString());
-                List_2.setText("Add information complete");
-                Text_user_2.setText("");
+                data2.add(textUser2.getText().toString());
+                list2.setText("Add information complete");
+                textUser2.setText("");
             }
         });
-        buttonShow_2.setOnClickListener(new View.OnClickListener() {
+        buttonShow2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Data_to_string_2="";
-                List_2.setText(Data_2.toString());
+                dataToString2 ="";
+                list2.setText(data2.toString());
             }
         });
 
