@@ -1,11 +1,11 @@
 package xyz.bgw.mikhail.lesson1;
 
 public class Student {
-private long id;
-private String name;
-private String surname;
-private String garde;
-private String bithdayYear;
+    private long id;
+    private String name;
+    private String surname;
+    private String garde;
+    private String bithdayYear;
 
     public String getBithdayYear() {
         return bithdayYear;

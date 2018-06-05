@@ -20,10 +20,8 @@ public class Activity2 extends AppCompatActivity {
     String dataToString2;
 
 
-
-    public static Intent createStartIntetn_2(Context context)
-    {
-        Intent intent = new Intent(context , Activity2.class);
+    public static Intent createStartIntetn_2(Context context) {
+        Intent intent = new Intent(context, Activity2.class);
         return intent;
     }
 
@@ -46,7 +44,7 @@ public class Activity2 extends AppCompatActivity {
         buttonShow2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dataToString2 ="";
+                dataToString2 = "";
                 list2.setText(data2.toString());
             }
         });

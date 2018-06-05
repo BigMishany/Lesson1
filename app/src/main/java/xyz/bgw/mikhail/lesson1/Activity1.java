@@ -43,9 +43,8 @@ public class Activity1 extends AppCompatActivity {
         buttonShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dataToString ="";
-                for (int x = 0; x < data.size(); x++)
-                {
+                dataToString = "";
+                for (int x = 0; x < data.size(); x++) {
                     dataToString = dataToString + " " + data.get(x).toString();
                 }
                 list.setText(dataToString);
